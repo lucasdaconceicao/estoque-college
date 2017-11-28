@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Cancelar = new System.Windows.Forms.Button();
-            this.Salvar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,32 +66,34 @@
             this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Cancelar
+            // btnCancelar
             // 
-            this.Cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancelar.Image = global::EstoqueConsole.Properties.Resources.button_cancel;
-            this.Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Cancelar.Location = new System.Drawing.Point(370, 521);
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(95, 31);
-            this.Cancelar.TabIndex = 2;
-            this.Cancelar.Text = "CANCELAR";
-            this.Cancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Cancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = global::EstoqueConsole.Properties.Resources.button_cancel;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(370, 521);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(95, 31);
+            this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // Salvar
+            // btnSalvar
             // 
-            this.Salvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Salvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salvar.Image = global::EstoqueConsole.Properties.Resources.button_ok11;
-            this.Salvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Salvar.Location = new System.Drawing.Point(262, 522);
-            this.Salvar.Name = "Salvar";
-            this.Salvar.Size = new System.Drawing.Size(96, 30);
-            this.Salvar.TabIndex = 0;
-            this.Salvar.Text = "SALVAR";
-            this.Salvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Image = global::EstoqueConsole.Properties.Resources.button_ok11;
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.Location = new System.Drawing.Point(262, 522);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(96, 30);
+            this.btnSalvar.TabIndex = 0;
+            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtNome
             // 
@@ -428,12 +430,13 @@
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.Cancelar);
-            this.Controls.Add(this.Salvar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnSalvar);
             this.MaximizeBox = false;
             this.Name = "Frmclientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar clientes";
+            this.Load += new System.EventHandler(this.Frmclientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,8 +444,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Salvar;
-        private System.Windows.Forms.Button Cancelar;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
