@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7BCFD337-E01F-48E9-8AC5-0A9928AE977D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EstoqueConsole</RootNamespace>
+    <AssemblyName>EstoqueConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tela_login">
+      <HintPath>..\..\Tela_login\Tela_login\bin\Debug\Tela_login.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="controllers\Cliente.controllers.cs" />
+    <Compile Include="controllers\Produtos.controller.cs" />
+    <Compile Include="models\Cidade.model.cs" />
+    <Compile Include="models\Cliente.model.cs" />
+    <Compile Include="models\Endereco.model.cs" />
+    <Compile Include="models\Estado.model.cs" />
+    <Compile Include="models\Estoque.model.cs" />
+    <Compile Include="models\Fornecedor.model.cs" />
+    <Compile Include="models\Logradouro.model.cs" />
+    <Compile Include="models\Pais.model.cs" />
+    <Compile Include="models\Produto.model.cs" />
+    <Compile Include="models\Telefone.model.cs" />
+    <Compile Include="Views\FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FrmClientes_Visualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmClientes_Visualizar.Designer.cs">
+      <DependentUpon>FrmClientes_Visualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmFornecedores.Designer.cs">
+      <DependentUpon>FrmFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmFornecedores_Visualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmFornecedores_Visualizar.Designer.cs">
+      <DependentUpon>FrmFornecedores_Visualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmProdutos.Designer.cs">
+      <DependentUpon>FrmProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FrmProdutos_Visualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FrmProdutos_Visualizar.Designer.cs">
+      <DependentUpon>FrmProdutos_Visualizar.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmClientes_Visualizar.resx">
+      <DependentUpon>FrmClientes_Visualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmFornecedores.resx">
+      <DependentUpon>FrmFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmFornecedores_Visualizar.resx">
+      <DependentUpon>FrmFornecedores_Visualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmProdutos.resx">
+      <DependentUpon>FrmProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FrmProdutos_Visualizar.resx">
+      <DependentUpon>FrmProdutos_Visualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="models\Bairro.model.cs" />
+    <Compile Include="controllers\Bairro.controllers.cs" />
+    <Compile Include="controllers\Fornecedor.controllers.cs" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\add.ico" />
+    <Content Include="Resources\add2.ico" />
+    <Content Include="Resources\books.ico" />
+    <Content Include="Resources\botaoconsulta.png" />
+    <Content Include="Resources\box_add.ico" />
+    <Content Include="Resources\button_cancel.png" />
+    <Content Include="Resources\button_ok.png" />
+    <None Include="Resources\button_ok1.png" />
+    <Content Include="Resources\copy_f2.png" />
+    <Content Include="Resources\decrypted.png" />
+    <Content Include="Resources\delete2.ico" />
+    <Content Include="Resources\edit_add.png" />
+    <Content Include="Resources\edit_remove.png" />
+    <Content Include="Resources\exit.ico" />
+    <Content Include="Resources\filesave.png" />
+    <Content Include="Resources\window_information.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

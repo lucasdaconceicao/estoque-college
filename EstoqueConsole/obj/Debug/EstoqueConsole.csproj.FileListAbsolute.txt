@@ -1,0 +1,15 @@
+c:\users\lucass\documents\visual studio 2015\Projects\EstoqueConsole\EstoqueConsole\bin\Debug\EstoqueConsole.exe.config
+c:\users\lucass\documents\visual studio 2015\Projects\EstoqueConsole\EstoqueConsole\bin\Debug\EstoqueConsole.exe
+c:\users\lucass\documents\visual studio 2015\Projects\EstoqueConsole\EstoqueConsole\bin\Debug\EstoqueConsole.pdb
+c:\users\lucass\documents\visual studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.csprojResolveAssemblyReference.cache
+c:\users\lucass\documents\visual studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.Properties.Resources.resources
+c:\users\lucass\documents\visual studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.Frmclientes.resources
+c:\users\lucass\documents\visual studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.csproj.GenerateResource.Cache
+c:\users\lucass\documents\visual studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.exe
+c:\users\lucass\documents\visual studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.pdb
+C:\Users\lucass\Documents\Visual Studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.Views.FrmFornecedores.resources
+C:\Users\lucass\Documents\Visual Studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.Views.FrmProdutos.resources
+C:\Users\lucass\Documents\Visual Studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.Views.FrmPrincipal.resources
+C:\Users\lucass\Documents\Visual Studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.Views.FrmClientes_Visualizar.resources
+C:\Users\lucass\Documents\Visual Studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.Views.FrmFornecedores_Visualizar.resources
+C:\Users\lucass\Documents\Visual Studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.Views.FrmProdutos_Visualizar.resources
