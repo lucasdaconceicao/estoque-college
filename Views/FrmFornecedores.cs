@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EstoqueConsole
+namespace EstoqueConsole.Views
 {
-    public partial class Frmclientes : Form
+    public partial class FrmFornecedores : Form
     {
-        public Frmclientes()
+        public FrmFornecedores()
         {
             InitializeComponent();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("salvo");
+            MessageBox.Show("Salvo");
             LimparCampos();
         }
 
@@ -28,7 +28,16 @@ namespace EstoqueConsole
             this.Dispose();
         }
 
-        private void txtCpf_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtCnpj_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //cancela o evento no campo, se for letra e se nao for a tecla back
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtIE_KeyPress(object sender, KeyPressEventArgs e)
         {
             //cancela o evento no campo, se for letra e se nao for a tecla back
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
@@ -55,15 +64,6 @@ namespace EstoqueConsole
             }
         }
 
-        private void txtCep_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //cancela o evento no campo, se for letra e se nao for a tecla back
-            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
-            {
-                e.Handled = true;
-            }
-        }
-
         private void txtNumero_casa_KeyPress(object sender, KeyPressEventArgs e)
         {
             //cancela o evento no campo, se for letra e se nao for a tecla back
@@ -73,31 +73,42 @@ namespace EstoqueConsole
             }
         }
 
-        private void Frmclientes_Load(object sender, EventArgs e)
+        private void txtCep_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //vincular as teclas ENTER e ESC ao botao salvar e cancelar
-            this.AcceptButton = this.btnSalvar;
-            this.CancelButton = this.btnCancelar;
+            //cancela o evento no campo, se for letra e se nao for a tecla back
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
         }
 
         private void LimparCampos()
         {
             txtNome.Clear();
-            txtCpf.Clear();
+            txtRazaoSocial.Clear();
+            txtCnpj.Clear();
+            txtIE.Clear();
+            txtCep.Clear();
+            txtCidade.Clear();
+            txtEmail.Clear();
             txtCelular.Clear();
             txtFixo.Clear();
-            txtEmail.Clear();
-            txtCep.Clear();
-            txtNumero_casa.Clear();
-            txtReferencia.Clear();
-            txtComplemento.Clear();
-            txtRua.Clear();
-            txtBairro.Clear();
-            txtCidade.Clear();
             txtEstado.Clear();
             txtUf.Clear();
+            txtBairro.Clear();
+            txtNumero_casa.Clear();
             txtPais.Clear();
             txtSigla_pais.Clear();
+            txtRua.Clear();
+            txtReferencia.Clear();
+            txtComplemento.Clear();
+        }
+
+        private void FrmFornecedores_Load(object sender, EventArgs e)
+        {
+            //vincular as teclas ENTER e ESC ao botao salvar e cancelar
+            this.AcceptButton = this.btnSalvar;
+            this.CancelButton = this.btnCancelar;
         }
     }
 }
