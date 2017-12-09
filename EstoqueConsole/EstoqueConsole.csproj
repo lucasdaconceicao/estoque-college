@@ -147,7 +147,6 @@
       <DependentUpon>FrmProdutos_Visualizar.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="models\Bairro.model.cs" />
-    <Compile Include="controllers\Bairro.controllers.cs" />
     <Compile Include="controllers\Fornecedor.controllers.cs" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

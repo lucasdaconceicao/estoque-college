@@ -101,10 +101,10 @@ namespace EstoqueConsole.controllers
             fornecedor.removerFornecedor(id);
         }
 
-        public void Listarfornecedor(string fantasia)
+        public FornecedorModel Listarfornecedor(string fantasia)
         {
             var fornecedor = new FornecedorModel();
-            fornecedor.listarFornecedor(fantasia);
+            return fornecedor.listarFornecedor(fantasia);
         }
 
     }

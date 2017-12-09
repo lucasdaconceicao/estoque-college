@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EstoqueConsole.controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,18 @@ namespace EstoqueConsole.Views
 {
     public partial class FrmProdutos : Form
     {
+        int cod;
         public FrmProdutos()
         {
             InitializeComponent();
         }
 
+        public FrmProdutos(int id)
+        {
+            cod = id;
+            InitializeComponent();
+        }
+       
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -24,8 +32,16 @@ namespace EstoqueConsole.Views
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Salvo");
-            LimparCampos();
+            if (this.cod == null)
+            {
+                Produtos produto = new Produtos();
+                produto.CadastrarProduto(txtNome.Text, Convert.ToInt32(txtCod_Barras.Text), Convert.ToInt32(txtGrupo.Text), txtUn.Text);
+                LimparCampos();
+            }else
+            {
+                Produtos produto = new Produtos();
+                produto.AlterarProduto(this.cod,txtNome.Text, Convert.ToInt32(txtCod_Barras.Text), Convert.ToInt32(txtGrupo.Text), txtUn.Text);
+            }
         }
         private void LimparCampos()
         {

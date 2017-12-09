@@ -1,6 +1,4 @@
-﻿
-
-using EstoqueConsole.controllers;
+﻿using EstoqueConsole.controllers;
 using EstoqueConsole.models;
 using System;
 using System.Collections.Generic;
@@ -75,7 +73,8 @@ namespace EstoqueConsole.controllers
         )
         {
             ClienteModel clientes = new ClienteModel();
-            clientes.alterarCliente(int idCliente,
+            clientes.alterarCliente( 
+                idCliente,
                 telefoneFixo,
                 celular,
                 nome,
@@ -100,11 +99,10 @@ namespace EstoqueConsole.controllers
             cliente.removerCliente(id);
         }
 
-        public void ListarCliente(string nome)
+        public ClienteModel ListarCliente(string nome)
         {
             var clientes = new ClienteModel();
-            clientes.listarCliente(nome);
+            return clientes.listarCliente(nome);
         }
-
     }
 }

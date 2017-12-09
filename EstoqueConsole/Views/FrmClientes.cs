@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EstoqueConsole.controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +13,67 @@ namespace EstoqueConsole
 {
     public partial class FrmClientes : Form
     {
+        int cod;
         public FrmClientes()
         {
             InitializeComponent();
         }
 
+        public FrmClientes(int id)
+        {
+            cod = id;
+            InitializeComponent();
+        }
+
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-           
-            LimparCampos();
+            if (this.cod == null)
+            {
+                Cliente clientes = new Cliente();
+                clientes.CadastrarClientes(
+                    Convert.ToInt32(txtFixo.Text),
+                    Convert.ToInt32(txtCelular.Text),
+                    txtNome.Text,
+                    txtCpf.Text,
+                    Convert.ToDateTime(dtpNascimento.Text),
+                    txtEmail.Text,
+                    txtRua.Text,
+                    Convert.ToInt32(txtCep.Text),
+                    Convert.ToInt32(txtNumero_casa.Text),
+                    txtComplemento.Text,
+                    txtReferencia.Text,
+                    txtPais.Text,
+                    txtEstado.Text,
+                    txtCidade.Text,
+                    txtBairro.Text,
+                   txtRua.Text
+                );
+                LimparCampos();
+            }
+            else
+            {
+                Cliente clientes = new Cliente();
+                clientes.AlterarClientes(
+                    this.cod,
+                    Convert.ToInt32(txtFixo.Text),
+                    Convert.ToInt32(txtCelular.Text),
+                    txtNome.Text,
+                    txtCpf.Text,
+                    Convert.ToDateTime(dtpNascimento.Text),
+                    txtEmail.Text,
+                    txtRua.Text,
+                    Convert.ToInt32(txtCep.Text),
+                    Convert.ToInt32(txtNumero_casa.Text),
+                    txtComplemento.Text,
+                    txtReferencia.Text,
+                    txtPais.Text,
+                    txtEstado.Text,
+                    txtCidade.Text,
+                    txtBairro.Text,
+                    txtRua.Text
+                );
+                LimparCampos();
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

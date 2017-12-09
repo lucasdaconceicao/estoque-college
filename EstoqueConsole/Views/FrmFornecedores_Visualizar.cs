@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EstoqueConsole.controllers;
 
 namespace EstoqueConsole.Views
 {
@@ -15,6 +16,33 @@ namespace EstoqueConsole.Views
         public FrmFornecedores_Visualizar()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Fornecedor fornecedor = new Fornecedor();
+            dgvfornecedor.DataSource = fornecedor.Listarfornecedor(txtNome.Text);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Fornecedor fornecedor = new Fornecedor();
+            int codigo = Convert.ToInt32(dgvfornecedor.CurrentRow.Cells[0].Value.ToString());
+            fornecedor.RemoverFornecedor(codigo);
+            dgvfornecedor.Rows.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int codigo = Convert.ToInt32(dgvfornecedor.CurrentRow.Cells[0].Value.ToString());
+            FrmFornecedores tela = new FrmFornecedores(codigo);
+            tela.ShowDialog();
+            tela.Text = "Alterar fornecedores";
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

@@ -45,11 +45,9 @@ namespace EstoqueConsole.models
 
                 Estado estadoObj = new Estado();
                 int idEstadoCadastrado = estadoObj.cadastrarEstado(idPaisCadastrado, estado);
-
-                Cidade cidadeObj = new Cidade();
+                CidadeModel cidadeObj = new CidadeModel();
                 int idCidadeCadastrada = cidadeObj.cadastrarCidade(idEstadoCadastrado, cidade);
-
-                Bairro bairroObj = new Bairro();
+                BairroModel bairroObj = new BairroModel();
                 int bairroCadastrado = bairroObj.cadastrarBairro(idCidadeCadastrada, bairro);
 
                 Logradouro logradouroObj = new Logradouro();

@@ -146,7 +146,7 @@ namespace EstoqueConsole.models
                 inscricaoEstadual = x.IE,
                 email = x.EMAIL
             }).First();
-
+            
             return fornecedor;
         }
     }

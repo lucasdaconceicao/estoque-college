@@ -24,9 +24,9 @@ namespace EstoqueConsole.models
 
                 return telefone.idTELEFONE;
             }
-            catch (DbUpdateException ex)
+            catch (Exception ex)
             {
-                throw new DbUpdateException(ex.Message);
+                throw new Exception(ex.Message);
             }
         }
 

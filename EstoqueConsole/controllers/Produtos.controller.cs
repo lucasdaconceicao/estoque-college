@@ -26,5 +26,11 @@ namespace EstoqueConsole.controllers
             var prod = new ProdutoModel();
             prod.removerProduto(codigo);
         }
+
+        public ProdutoModel ListarProduto(string nome)
+        {
+            var produto = new ProdutoModel();
+            return produto.listarProduto(nome);
+        }
     }
 }
