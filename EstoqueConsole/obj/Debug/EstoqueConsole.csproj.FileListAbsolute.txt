@@ -13,3 +13,6 @@ C:\Users\lucass\Documents\Visual Studio 2015\Projects\EstoqueConsole\EstoqueCons
 C:\Users\lucass\Documents\Visual Studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.Views.FrmClientes_Visualizar.resources
 C:\Users\lucass\Documents\Visual Studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.Views.FrmFornecedores_Visualizar.resources
 C:\Users\lucass\Documents\Visual Studio 2015\Projects\EstoqueConsole\EstoqueConsole\obj\Debug\EstoqueConsole.Views.FrmProdutos_Visualizar.resources
+C:\Users\lucass\Documents\Visual Studio 2015\Projects\estoque-college\EstoqueConsole\bin\Debug\EstoqueConsole.exe.config
+C:\Users\lucass\Documents\Visual Studio 2015\Projects\estoque-college\EstoqueConsole\obj\Debug\EstoqueConsole.exe
+C:\Users\lucass\Documents\Visual Studio 2015\Projects\estoque-college\EstoqueConsole\obj\Debug\EstoqueConsole.pdb

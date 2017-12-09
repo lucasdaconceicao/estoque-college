@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Tela_login;
 
 namespace EstoqueConsole
 {
@@ -16,7 +17,11 @@ namespace EstoqueConsole
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Views.FrmPrincipal());
+            Frm_Login flogin = new Frm_Login();
+            if (flogin.Logado)
+            {
+                Application.Run(new Views.FrmPrincipal());
+            }
         }
     }
 }
